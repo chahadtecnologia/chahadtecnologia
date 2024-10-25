@@ -1,5 +1,5 @@
 
-![Banner de Cybersecurity](./cybersecurity.webp)
+![Banner de Cybersecurity](./cybersecurity_image.png)
 
 # Welcome to my GitHub!
 ## I am a Cybersecurity Specialist, with a focus on Cloud Security, Network Security, Container Security and Linux Security. I have over 20 years of experience in the technology area, implementing practices and solutions in critical and complex environments.
