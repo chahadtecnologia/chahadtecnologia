@@ -2,16 +2,16 @@
 ![Banner de Cybersecurity](./cybersecurity_image.png)
 
 # Welcome to my GitHub!
-## I am a Cybersecurity Specialist, with a focus on Cloud Security, Network Security, Container Security and Linux Security. I have over 20 years of experience in the technology area, implementing practices and solutions in critical and complex environments.
+## I am a Cyber Security Specialist, with a focus on Cloud Security, Network Security, Container Security and Linux Security. I have over 20 years of experience in the technology area, implementing practices and solutions in critical and complex environments.
 
 ## Positions:
-- Cybersecurity Architect
-- Cybersecurity Engineer Tech Lead (Blue Team)
-- Cybersecurity Engineer (Cloud Security - Blue Team)
+- Cyber Security Architect
+- Cyber Security Engineer Tech Lead (Blue Team)
+- Cyber Security Engineer (Cloud Security - Blue Team)
 - DevOps/SRE Specialist
 - DevOps/SRE Engineer
 - Systems Analyst
-- Cybersecurity Analyst
+- Cyber Security Analyst
 - Support analyst
 
 ## Courses:
