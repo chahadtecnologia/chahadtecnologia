@@ -8,8 +8,8 @@
 - Cyber Security Architect
 - Cyber Security Engineer Tech Lead (Blue Team)
 - Cyber Security Engineer (Cloud Security - Blue Team)
-- DevOps/SRE Specialist
-- DevOps/SRE Engineer
+- DevOps Specialist
+- DevOps Engineer
 - Systems Analyst
 - Cyber Security Analyst
 - Support analyst
