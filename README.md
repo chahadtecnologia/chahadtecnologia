@@ -14,6 +14,7 @@
 - Support analyst
 
 ## Courses:
+- ROS2 for Beginners Level 2 - TF / URDF / RViz / Gazebo (02/2026)
 - ROS2 for Beginners (Robot Operating System 2) (01/2026)
 - Clavis Academy - EXIN Ethical Hacking and CompTIA PenTest+ (11/2020)
 - ICSI | CNSS Certified Network Security Specialist (05/2020)
