@@ -1,5 +1,5 @@
 
-![Banner de Cybersecurity](./cybersecurity_image.png)
+![Banner de Cybersecurity](./ChahadTecnologia.png)
 
 # Welcome to my GitHub!
 ## I'm a Cyber Security Specialist, with a focus on Cloud Security, Network Security, Container Security and Linux Security. I have over 20 years of experience in the technology area, implementing practices and solutions in critical and complex environments.
