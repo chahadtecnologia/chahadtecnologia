@@ -5,13 +5,13 @@
 ## I'm a Cyber Security Specialist, with a focus on Cloud Security, Network Security, Container Security and Linux Security. I have over 20 years of experience in the technology area, implementing practices and solutions in critical and complex environments.
 
 ## Positions:
-- Cyber Security Architect
-- Cyber Security Engineer Tech Lead (Blue Team)
-- Cyber Security Engineer (Cloud Security - Blue Team)
-- DevOps Specialist
-- DevOps Engineer
-- Systems Analyst
-- Support analyst
+- Cyber Security Architect (2024 -> at the moment)
+- Cyber Security Engineer - Tech Lead - Blue Team (2022 -> 2024)
+- Cyber Security Engineer - Cloud Security - Blue Team (2021 -> 2022)
+- DevOps Specialist (2019 -> 2021)
+- DevOps Engineer (2018 -> 2019)
+- Systems Analyst (2010 -> 2017)
+- Support analyst (2005 -> 2010)
 
 ## Courses:
 - ROS2 for Beginners Level 3 - Advanced Concepts (03/2026)
