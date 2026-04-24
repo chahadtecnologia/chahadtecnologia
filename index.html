@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Cyber Security Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .accent-border { border-left: 4px solid #38bdf8; }
+        .timeline-dot { position: relative; }
+        .timeline-dot::before { content: ''; position: absolute; left: -25px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 10px #38bdf8; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <header class="relative w-full max-w-5xl mx-auto pt-8 px-4">
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+            <img src="./ChahadTecnologia.png" alt="Cybersecurity Banner" class="w-full h-auto object-cover">
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-4 md:p-8 space-y-12">
+        
+        <section class="text-center space-y-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-sky-400">Welcome to my GitHub!</h1>
+            <p class="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto text-slate-300">
+                I'm a <span class="text-white font-semibold">Cyber Security Specialist</span>, with a focus on Cloud, Network, Container and Linux Security. Over 20 years of experience implementing solutions in critical and complex environments.
+            </p>
+        </section>
+
+        <hr class="border-slate-800">
+
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <section class="space-y-6">
+                <h3 class="text-2xl font-bold flex items-center gap-3">
+                    <i class="fas fa-briefcase text-sky-500"></i> Positions
+                </h3>
+                <div class="ml-8 border-l border-slate-700 space-y-8">
+                    <div class="timeline-dot ml-6">
+                        <h4 class="font-bold text-sky-300">Cyber Security Architect</h4>
+                        <p class="text-sm text-slate-400">2024 &rarr; Present</p>
+                    </div>
+                    <div class="timeline-dot ml-6">
+                        <h4 class="font-bold text-slate-200">Cyber Security Engineer - Tech Lead</h4>
+                        <p class="text-sm text-slate-400 font-medium italic">Blue Team</p>
+                        <p class="text-sm text-slate-500">2022 &rarr; 2024</p>
+                    </div>
+                    <div class="timeline-dot ml-6">
+                        <h4 class="font-bold text-slate-200">Cyber Security Engineer - Cloud Security</h4>
+                        <p class="text-sm text-slate-400 font-medium italic">Blue Team</p>
+                        <p class="text-sm text-slate-500">2021 &rarr; 2022</p>
+                    </div>
+                    <div class="timeline-dot ml-6">
+                        <h4 class="font-bold text-slate-200">DevOps Specialist</h4>
+                        <p class="text-sm text-slate-500">2019 &rarr; 2021</p>
+                    </div>
+                    <div class="timeline-dot ml-6 text-slate-400">
+                        <h4 class="font-semibold">Previous Roles</h4>
+                        <p class="text-xs">DevOps Engineer, Systems Analyst, Support Analyst (2005 - 2019)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h3 class="text-2xl font-bold flex items-center gap-3">
+                    <i class="fas fa-certificate text-sky-500"></i> Certifications
+                </h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="glass p-4 rounded-lg accent-border">
+                        <p class="text-slate-200 font-medium">Associate Cloud Engineer / GCP</p>
+                    </div>
+                    <div class="glass p-4 rounded-lg accent-border">
+                        <p class="text-slate-200 font-medium">EXIN Ethical Hacking & CompTIA PenTest+</p>
+                    </div>
+                    <div class="glass p-4 rounded-lg accent-border">
+                        <p class="text-slate-200 font-medium">ICSI | CNSS Certified Network Security Specialist</p>
+                    </div>
+                    <div class="glass p-4 rounded-lg accent-border">
+                        <p class="text-slate-200 font-medium">Linux Professional Institute / LPI 101</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-sky-900/50">
+                    <h4 class="text-sky-400 font-bold mb-3 flex items-center gap-2">
+                        <i class="fas fa-robot"></i> Recent Technical Focus
+                    </h4>
+                    <ul class="text-sm space-y-2 text-slate-300">
+                        <li>• ROS2 Advanced Concepts (Level 3)</li>
+                        <li>• TF / URDF / RViz / Gazebo</li>
+                        <li>• Robotics Security Middleware</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="space-y-6 pb-12">
+            <h3 class="text-2xl font-bold flex items-center gap-3">
+                <i class="fas fa-graduation-cap text-sky-500"></i> Education & Specialized Courses
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
+                    <span class="text-sky-500 font-mono">2026</span>
+                    <p class="text-slate-300">ROS2 for Beginners (Level 1, 2 & 3)</p>
+                </div>
+                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
+                    <span class="text-sky-500 font-mono">2020</span>
+                    <p class="text-slate-300">Clavis Academy - Ethical Hacking & PenTest+</p>
+                </div>
+                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
+                    <span class="text-sky-500 font-mono">2019</span>
+                    <p class="text-slate-300">Google Certified Associate Cloud Engineer</p>
+                </div>
+                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
+                    <span class="text-sky-500 font-mono">2013</span>
+                    <p class="text-slate-300">Linux Server Security - 4Linux</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 text-slate-500 text-sm border-t border-slate-800">
+        <p>© 2026 | Cyber Security Professional</p>
+    </footer>
+
+</body>
+</html>
