@@ -191,13 +191,53 @@
             <h3 class="text-2xl font-bold flex items-center gap-3">
                 <i class="fab fa-github text-sky-500"></i> Repositories
             </h3>
-            <div class="grid md:grid-cols-2 gap-4 text-sm">
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono"><a href="https://github.com/chahadtecnologia" target="_blank">GitHub</a></span>
-                    <p class="text-slate-300">Chahad Tecnologia</p>
+            <div class="relative h-[300px] flex items-center justify-center">
+                <button id="main-branch" class="z-10 p-6 bg-slate-900 border-2 border-sky-500 rounded-full hover:scale-110 transition-transform shadow-lg shadow-sky-500/20">
+                    <i class="fab fa-github text-3xl text-sky-500"></i>
+                </button>
+                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-40" data-dist="140">
+                    <a href="https://github.com/chahadtecnologia/Linux" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2">
+                        <i class="fab fa-linux text-base"></i> Linux
+                    </a>
+                </div>
+                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="0" data-dist="160">
+                    <a href="https://github.com/chahadtecnologia/ROS2" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block">
+                        🤖 ROS2
+                    </a>
+                </div>
+                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="40" data-dist="140">
+                    <a href="https://github.com/chahadtecnologia/CompTIA" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block">
+                        🛡️ CompTIA
+                    </a>
                 </div>
             </div>
         </section>
+
+        <script>
+            const btn = document.getElementById('main-branch');
+            const branches = document.querySelectorAll('.branch-item');
+            let isOpen = false;
+
+            btn.addEventListener('click', () => {
+                isOpen = !isOpen;
+                
+                branches.forEach((item, index) => {
+                    if (isOpen) {
+                        const angle = item.getAttribute('data-angle');
+                        const dist = item.getAttribute('data-dist');
+                        // Cálculo de trigonometria simples para posicionar os braços em arco
+                        const x = Math.cos(angle * Math.PI / 180) * dist;
+                        const y = Math.sin(angle * Math.PI / 180) * dist;
+
+                        item.style.transform = `translate(${x}px, ${y}px) scale(1)`;
+                        item.style.opacity = '1';
+                    } else {
+                        item.style.transform = `translate(0, 0) scale(0)`;
+                        item.style.opacity = '0';
+                    }
+                });
+            });
+        </script>
 
         <section class="space-y-6 pb-12">
             <h3 class="text-2xl font-bold flex items-center gap-3">
