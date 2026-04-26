@@ -190,70 +190,103 @@
         <section class="space-y-6 pb-12">
             <h3 class="text-2xl font-bold flex items-center gap-3">
                 <i class="fab fa-github text-sky-500"></i> Repositories
-            </h3>
-            <div class="relative h-[350px] flex items-center justify-center overflow-hidden">
-                <button id="main-branch" class="z-10 p-6 bg-slate-900 border-2 border-sky-500 rounded-full hover:scale-110 active:scale-95 transition-transform shadow-lg shadow-sky-500/20">
+            </h3>          
+            <div class="relative h-[400px] w-full flex items-center justify-center overflow-hidden bg-slate-950/50 rounded-xl">  
+                <svg class="absolute inset-0 w-full h-full pointer-events-none" id="branch-svg">
+                    </svg>
+                <button id="main-branch" class="z-20 p-6 bg-slate-900 border-2 border-sky-500 rounded-full hover:scale-110 active:scale-95 transition-transform shadow-[0_0_20px_rgba(14,165,233,0.3)]">
                     <i class="fab fa-github text-3xl text-sky-500"></i>
                 </button>
-                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-140" data-dist="160">
-                    <a href="https://github.com/chahadtecnologia/Linux" target="_blank" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2 whitespace-nowrap">
-                        <i class="fab fa-linux text-base text-sky-500"></i> Linux
-                    </a>
-                </div>
-                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-100" data-dist="160">
-                    <a href="https://github.com/chahadtecnologia/ROS2" target="_blank" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2 whitespace-nowrap">
-                        <i class="fas fa-robot text-base text-sky-500"></i> ROS2
-                    </a>
-                </div>
-                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-70" data-dist="160">
-                    <a href="https://github.com/chahadtecnologia/Vagrant" target="_blank" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2 whitespace-nowrap">
-                        <i class="fas fa-server text-base text-sky-500"></i> Vagrant
-                    </a>
-                </div>
-                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-40" data-dist="160">
-                    <a href="https://github.com/chahadtecnologia/CompTIA" target="_blank" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2 whitespace-nowrap">
-                        <i class="fas fa-shield-alt text-base text-sky-500"></i> CompTIA
-                    </a>
-                </div>
-                <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="0" data-dist="160">
-                    <a href="https://github.com/chahadtecnologia?tab=repositories" target="_blank" class="p-3 border border-slate-700 bg-slate-800 rounded-lg text-xs hover:border-sky-500 block flex items-center gap-2 whitespace-nowrap">
-                        <i class="fas fa-boxes text-base text-sky-500"></i> All Repos
-                    </a>
+                <div class="branch-container absolute inset-0 flex items-center justify-center pointer-events-none">     
+                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-150" data-dist="180">
+                        <a href="https://github.com/chahadtecnologia/Linux" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
+                            <i class="fab fa-linux text-sky-500"></i> Linux
+                        </a>
+                    </div>
+                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-110" data-dist="180">
+                        <a href="https://github.com/chahadtecnologia/ROS2" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
+                            <i class="fas fa-robot text-sky-500"></i> ROS2
+                        </a>
+                    </div>
+                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-70" data-dist="180">
+                        <a href="https://github.com/chahadtecnologia/Vagrant" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
+                            <i class="fas fa-server text-sky-500"></i> Vagrant
+                        </a>
+                    </div>
+                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="-30" data-dist="180">
+                        <a href="https://github.com/chahadtecnologia/CompTIA" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
+                            <i class="fas fa-shield-alt text-sky-500"></i> CompTIA
+                        </a>
+                    </div>
+                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="10" data-dist="180">
+                        <a href="https://github.com/chahadtecnologia?tab=repositories" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
+                            <i class="fas fa-boxes text-sky-500"></i> All Repos
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <script>
             const btn = document.getElementById('main-branch');
-            const branches = document.querySelectorAll('.branch-item');
+            const items = document.querySelectorAll('.branch-item');
+            const svg = document.getElementById('branch-svg');
             let isOpen = false;
+
+            // Função para criar as linhas SVG
+            function updateLines() {
+                svg.innerHTML = '';
+                const centerX = svg.clientWidth / 2;
+                const centerY = svg.clientHeight / 2;
+
+                items.forEach((item, i) => {
+                    const angle = item.getAttribute('data-angle');
+                    const dist = item.getAttribute('data-dist');
+                    const rad = angle * Math.PI / 180;
+                    
+                    const targetX = centerX + Math.cos(rad) * dist;
+                    const targetY = centerY + Math.sin(rad) * dist;
+
+                    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                    line.setAttribute("x1", centerX);
+                    line.setAttribute("y1", centerY);
+                    line.setAttribute("x2", targetX);
+                    line.setAttribute("y2", targetY);
+                    line.setAttribute("stroke", "#0ea5e9"); // sky-500
+                    line.setAttribute("stroke-width", "2");
+                    line.setAttribute("stroke-dasharray", dist);
+                    line.setAttribute("stroke-dashoffset", isOpen ? "0" : dist);
+                    line.setAttribute("style", `transition: stroke-dashoffset 0.5s ease-out ${i * 50}ms; opacity: ${isOpen ? '0.4' : '0'}`);
+                    
+                    svg.appendChild(line);
+                });
+            }
 
             btn.addEventListener('click', () => {
                 isOpen = !isOpen;
                 
-                branches.forEach((item, index) => {
+                items.forEach((item, index) => {
                     if (isOpen) {
                         const angle = item.getAttribute('data-angle');
                         const dist = item.getAttribute('data-dist');
-                        
-                        // Cálculo de posição
                         const x = Math.cos(angle * Math.PI / 180) * dist;
                         const y = Math.sin(angle * Math.PI / 180) * dist;
 
-                        // Adiciona um delay cascata (stagger effect)
                         item.style.transitionDelay = `${index * 50}ms`;
                         item.style.transform = `translate(${x}px, ${y}px) scale(1)`;
                         item.style.opacity = '1';
-                        item.style.pointerEvents = 'auto';
                     } else {
-                        // Remove o delay ao fechar para ser instantâneo ou reverso
-                        item.style.transitionDelay = `0ms`;
+                        item.style.transitionDelay = '0ms';
                         item.style.transform = `translate(0, 0) scale(0)`;
                         item.style.opacity = '0';
-                        item.style.pointerEvents = 'none';
                     }
                 });
+                
+                updateLines();
             });
+
+            // Ajusta as linhas se a janela mudar de tamanho
+            window.addEventListener('resize', () => { if(isOpen) updateLines(); });
         </script>
 
         <section class="space-y-6 pb-12">
