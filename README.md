@@ -1,5 +1,7 @@
 
-![Banner de Cybersecurity](./ChahadTecnologia.png)
+<div align="center">
+  <img src="./Lucy.gif" alt="Banner de Cybersecurity">
+</div>
 
 # Welcome to my GitHub!
 ## I'm a Cyber Security Specialist, with a focus on Cloud, Network, Container and Linux Security. Over 20 years of experience implementing solutions in critical and complex environments.
