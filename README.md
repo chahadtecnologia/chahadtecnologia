@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="./Lucy.gif" alt="Banner de Cybersecurity">
+  <img src="./Lucy.gif" alt="Banner de Cybersecurity" width="100%">
 </div>
 
 # Welcome to my GitHub!
