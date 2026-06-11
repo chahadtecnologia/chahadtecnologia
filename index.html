@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { 
-            background-color: #0f172a; 
+            background-color: #0f172a; /* Fundo base escuro */
             color: #f8fafc; 
             margin: 0;
             overflow-x: hidden;
         }
 
-        /* Efeito de Reflexo na Água / Luz Fluida Intensificado */
+        /* --- NOVO BACKGROUND: Rede Neural de Partículas --- */
         #bg-animation {
             position: fixed;
             top: 0;
@@ -22,41 +22,32 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at 50% 50%, #131c2e 0%, #0f172a 100%);
+            /* Mantendo o tom de azul escuro do fundo */
+            background-color: #0f172a; 
             overflow: hidden;
         }
 
-        #bg-animation::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            /* Gradientes com opacidade aumentada para 0.15 e 0.12 */
-            background: radial-gradient(circle at center, rgba(56, 189, 248, 0.15) 0%, transparent 45%),
-                        radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
-                        radial-gradient(circle at 70% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 40%);
-            animation: water-move 12s ease-in-out infinite alternate;
+        #bg-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
-
-        @keyframes water-move {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-            50% { transform: translate(-3%, 7%) scale(1.1) rotate(1deg); }
-            100% { transform: translate(3%, -3%) scale(1) rotate(-1deg); }
-        }
+        /* --------------------------------------------------- */
 
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
         .accent-border { border-left: 4px solid #38bdf8; }
         .timeline-dot { position: relative; }
         .timeline-dot::before { content: ''; position: absolute; left: -25px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 10px #38bdf8; }
         
+        /* Garante que o conteúdo fique acima do canvas */
         main, header, footer { position: relative; z-index: 1; }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <div id="bg-animation"></div>
+    <div id="bg-animation">
+        <canvas id="bg-canvas"></canvas>
+    </div>
 
     <header class="relative w-full max-w-5xl mx-auto pt-8 px-4">
         <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
@@ -75,7 +66,6 @@
 
         <hr class="border-slate-800">
 
-        <!-- Bloco 1: Positions (Esquerda) e Certifications/Focus (Direita) -->
         <div class="grid md:grid-cols-2 gap-12">
             
             <section class="space-y-6">
@@ -142,7 +132,6 @@
 
         <hr class="border-slate-800">
 
-        <!-- Bloco 2: Seção Technical Expertise independente e perfeitamente alinhada em 2 colunas -->
         <section class="space-y-6">
             <h3 class="text-2xl font-bold flex items-center gap-3">
                 <i class="fas fa-cubes text-sky-500"></i> Technical Expertise
@@ -191,38 +180,6 @@
                     <p class="text-slate-300">ROS2 for Beginners Level 3 - Advanced Concepts</p>
                 </div>
                 <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2026</span>
-                    <p class="text-slate-300">ROS2 for Beginners Level 2 - TF / URDF / RViz / Gazebo</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2026</span>
-                    <p class="text-slate-300">ROS2 for Beginners Level 1 - Robot Operating System 2</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2020</span>
-                    <p class="text-slate-300">Clavis Academy - Ethical Hacking & PenTest+</p>
-                </div>
-                 <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2020</span>
-                    <p class="text-slate-300">ICSI | CNSS Certified Network Security Specialist</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2019</span>
-                    <p class="text-slate-300">Google Certified Associate Cloud Engineer</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2017</span>
-                    <p class="text-slate-300">Google Cloud Platform</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2014</span>
-                    <p class="text-slate-300">Nagios Essential by Tempo Real Eventos</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
-                    <span class="text-sky-500 font-mono">2013</span>
-                    <p class="text-slate-300">Linux Server Security - 4Linux</p>
-                </div>
-                <div class="p-4 border border-slate-800 rounded-lg hover:bg-slate-800/50 transition">
                     <span class="text-sky-500 font-mono">2006</span>
                     <p class="text-slate-300">Complete Linux course by Impacta Tecnologias</p>
                 </div>
@@ -235,7 +192,7 @@
             </h3>
             <div class="relative h-[500px] w-full flex items-center justify-center overflow-hidden bg-slate-950/30 rounded-2xl border border-slate-800/50">
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" id="branch-svg">
-                    </svg>
+                </svg>
                 <button id="main-branch" class="z-20 p-6 bg-slate-900 border-2 border-sky-500 rounded-full hover:scale-110 active:scale-95 transition-transform shadow-[0_0_30px_rgba(14,165,233,0.4)]">
                     <i class="fab fa-github text-4xl text-sky-500"></i>
                 </button>
@@ -245,7 +202,7 @@
                             <i class="fab fa-linux text-sky-500"></i> Linux
                         </a>
                     </div>
-                    <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="45" data-dist="200">
+                     <div class="branch-item absolute opacity-0 scale-0 transition-all duration-500 ease-out" data-angle="45" data-dist="200">
                         <a href="https://github.com/chahadtecnologia/ROS2" target="_blank" class="p-3 border border-sky-500/30 bg-slate-900 rounded-lg text-xs text-slate-300 hover:border-sky-500 hover:text-white block flex items-center gap-2 pointer-events-auto shadow-lg">
                             <i class="fas fa-robot text-sky-500"></i> ROS2
                         </a>
@@ -280,7 +237,6 @@
                             <i class="fas fa-boxes text-sky-500"></i> All Repos
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -363,5 +319,109 @@
         <p>© 2026 | Cyber Security Professional</p>
     </footer>
 
-</body>
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Configurações da animação
+        let particles = [];
+        const particleCount = 100; // Número de nós
+        const connectionDistance = 120; // Distância máxima para conectar
+        const particleSpeed = 0.3; // Velocidade do movimento
+
+        // Define o tamanho do canvas para ocupar a tela cheia
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles(); // Reiguala as partículas ao redimensionar
+        }
+
+        // Classe que define cada "nó" da rede
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                // Velocidade aleatória em X e Y
+                this.vx = (Math.random() - 0.5) * particleSpeed;
+                this.vy = (Math.random() - 0.5) * particleSpeed;
+                this.radius = Math.random() * 3 + 3; // Tamanho do ponto
+            }
+
+            // Atualiza a posição e faz "quicar" nas bordas
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            // Desenha o ponto
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                // Cor do ponto: Azul celeste (#38bdf8) com baixa opacidade
+                ctx.fillStyle = 'rgba(56, 189, 248, 0.3)'; 
+                ctx.fill();
+            }
+        }
+
+        // Cria todas as partículas
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        // Desenha as linhas de conexão entre pontos próximos
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    // Teorema de Pitágoras para calcular a distância
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    // Se estiverem próximos, desenha a linha
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        // A opacidade da linha depende da distância (mais perto = mais forte)
+                        const opacity = 1 - (distance / connectionDistance);
+                        // Cor da linha: Azul celeste (#38bdf8)
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${opacity * 0.5})`; 
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Loop principal da animação
+        function animate() {
+            // Limpa o canvas a cada frame (mantendo o fundo escuro definido no CSS)
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Atualiza e desenha cada partícula
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            // Desenha as conexões
+            drawConnections();
+
+            // Solicita o próximo frame
+            requestAnimationFrame(animate);
+        }
+
+        // Inicialização
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas(); // Define tamanho inicial e cria partículas
+        animate(); // Inicia o loop
+
+    </script>
+    </body>
 </html>
