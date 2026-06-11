@@ -26,6 +26,7 @@
 - Nagios Essential by Tempo Real Eventos (2014)
 - Linux Server Security Course by 4 Linux (2013)
 - Complete Linux course by Impacta Tecnologias (2006)
+- MCSE Window Server 2000 - Impacta Tecnologias (2001)
 
 ## Certifications:
 - EXIN Ethical Hacking and CompTIA PenTest+
