@@ -1,10 +1,10 @@
 
 <div align="center">
-  <img src="./Lucy.gif" alt="Banner de Cybersecurity" width="100%">
+  <img src="./Lucy.gif" alt="Banner de Cyber Security" width="100%">
 </div>
 
 # Welcome to my GitHub!
-## I'm a Cyber Security Specialist, with a focus on Cloud, Network, Container and Linux Security. Over 20 years of experience implementing solutions in critical and complex environments.
+## I'm a Cyber Security Architect, with a focus on Cloud, Network, Container and Linux Security. Over 20 years of experience implementing solutions in critical and complex environments.
 
 ## Positions:
 - Cyber Security Architect (2024 -> at the moment)
