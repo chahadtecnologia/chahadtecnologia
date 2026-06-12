@@ -1,6 +1,7 @@
-
 <div align="center">
-  <img src="./Lucy.gif" alt="Banner de Cyber Security" width="100%">
+  <a href="" target="_blank">
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGwxODc2YWp4ZGk5YmtvMXY2OWkxaXNobXc5MndkdGxqbG8xazBzYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRFEa8lbeC7zbcIZZR/giphy.gif" alt="Banner de Cyber Security" width="100%">
+  </a>
 </div>
 
 # Welcome to my GitHub!
