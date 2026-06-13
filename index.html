@@ -64,6 +64,17 @@
         .group:hover .char-wave {
             animation: letterWave 0.5s ease-in-out infinite;
         }
+
+        /* --- ANIMAÇÕES DO BANNER EM TRÊS LINHAS --- */
+        @keyframes moveLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes moveRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -73,8 +84,77 @@
     </div>
 
     <header class="relative w-full max-w-5xl mx-auto pt-8 px-4">
-        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700 animate-neon-glow">
-            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt4em53aXRmNjFvN3cxYWl4YWdwcGQycngxdjhrZnhzMmdiaHF1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRFEa8lbeC7zbcIZZR/giphy.gif" alt="Cybersecurity Banner" class="w-full h-auto object-cover">
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700 animate-neon-glow grid grid-rows-3 h-[240px] md:h-[320px]">
+            
+            <div class="w-full h-full overflow-hidden relative flex">
+                <div class="flex absolute top-0 h-full w-[200%] animate-[moveRight_35s_linear_infinite]">
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt4em53aXRmNjFvN3cxYWl4YWdwcGQycngxdjhrZnhzMmdiaHF1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRFEa8lbeC7zbcIZZR/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazlkaWRvYTVnOWV3MnZ5bG15M3U2eG41MHl5anB3eGVvb2VqYnc3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7NS9RAepPQ0HJ85qJz/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2h4aDk0bmlqYjF3djA3NHF2dWIxNW82YXNuMnlqdGs5a2FjenJsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LR5ZBwZHv02lmpVoEU/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJvZXN6OW1hNzhwcGgxMzJqYWVuNnVqcGFxanhjY2U1OGdzanNpYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10ppffwhOftLy0/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHloNm8zbWM1Y2E1dDFrbjg4emhhYjIzMG5kdWR1NzE5ajhtY3NtayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2XB76CaWPggiNW/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG8wZHZ6MnF4bzluOGxoNnlhcnVmZnZpNGZkY2NmMjA5ZHU3MGlmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eVSqI3mZYfaDIXYsnS/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlqMzhud2dyZTJkYmJ3MGp2YmhmdWRudmFzZzI5cGUwNjJxcWwycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ud8TdUPuo43ktL8tAE/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt4em53aXRmNjFvN3cxYWl4YWdwcGQycngxdjhrZnhzMmdiaHF1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRFEa8lbeC7zbcIZZR/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazlkaWRvYTVnOWV3MnZ5bG15M3U2eG41MHl5anB3eGVvb2VqYnc3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7NS9RAepPQ0HJ85qJz/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2h4aDk0bmlqYjF3djA3NHF2dWIxNW82YXNuMnlqdGs5a2FjenJsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LR5ZBwZHv02lmpVoEU/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJvZXN6OW1hNzhwcGgxMzJqYWVuNnVqcGFxanhjY2U1OGdzanNpYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10ppffwhOftLy0/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHloNm8zbWM1Y2E1dDFrbjg4emhhYjIzMG5kdWR1NzE5ajhtY3NtayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2XB76CaWPggiNW/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG8wZHZ6MnF4bzluOGxoNnlhcnVmZnZpNGZkY2NmMjA5ZHU3MGlmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eVSqI3mZYfaDIXYsnS/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlqMzhud2dyZTJkYmJ3MGp2YmhmdWRudmFzZzI5cGUwNjJxcWwycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ud8TdUPuo43ktL8tAE/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-full overflow-hidden relative flex">
+                <div class="flex absolute top-0 h-full w-[200%] animate-[moveLeft_35s_linear_infinite]">
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmNjZDN2aWtkN3h5ODJ4dDBsazcyZDRscTZ2OW5meHMyMmo0MDR0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QaMhVZVwOvDiw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTN3b3A1djIzNWF4N3gzZjg1eTl5aXEyODM5MnVmenZveGNwbnRnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnfzT3k8g7wpG/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDVmZW4zemlsbzlrOG9iemxia3V0bTNuaW1rMTY2ajV6NzNxcDRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SbdrXHzWCKKOAug9hL/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGlzcGN4MzBrNTh6Ym1pOW4wY2VibmVwaHpxeXN5dGp5NHNtaHE2NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B1xUp52rUnrv1Leakw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWRteTJ4NHM4eDk1NDYzNDIyaTZkbWoweHpsdzM3OTk4bDJiMmZxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IcZhFmufozDCij3p22/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjlkNnBxbjV3OTh1dnNwNjVud3k3dDJjY2l5YXk3MHhwM2NyeGQ3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QrLlkjnfibr4EgcYCY/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk1dWRlMXVnbGIwajQ3dmlxYnVsc2M4NHg2djFoYXdyOGQ0eDRscyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eFvs5iE6a6ntVIRaEN/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmNjZDN2aWtkN3h5ODJ4dDBsazcyZDRscTZ2OW5meHMyMmo0MDR0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QaMhVZVwOvDiw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTN3b3A1djIzNWF4N3gzZjg1eTl5aXEyODM5MnVmenZveGNwbnRnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnfzT3k8g7wpG/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDVmZW4zemlsbzlrOG9iemxia3V0bTNuaW1rMTY2ajV6NzNxcDRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SbdrXHzWCKKOAug9hL/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGlzcGN4MzBrNTh6Ym1pOW4wY2VibmVwaHpxeXN5dGp5NHNtaHE2NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B1xUp52rUnrv1Leakw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWRteTJ4NHM4eDk1NDYzNDIyaTZkbWoweHpsdzM3OTk4bDJiMmZxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IcZhFmufozDCij3p22/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjlkNnBxbjV3OTh1dnNwNjVud3k3dDJjY2l5YXk3MHhwM2NyeGQ3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QrLlkjnfibr4EgcYCY/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk1dWRlMXVnbGIwajQ3dmlxYnVsc2M4NHg2djFoYXdyOGQ0eDRscyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eFvs5iE6a6ntVIRaEN/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-full overflow-hidden relative flex">
+                <div class="flex absolute top-0 h-full w-[200%] animate-[moveRight_35s_linear_infinite]">
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWFuN3Q4eXY1OW44aGIwOGVsZ283OXJvNHJxcjd0azU2N2s1emx0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ox91VuRSYDxKkQF3zf/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDZ4Njc3bXljN3ptNDl4dzM3MXhjMnZtMGplemhjZWszNzh3cXJmMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9zExs2Q2h1EHfE4P6G/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHM3M3dlaG5ja3lrMGNybTQ0enV1ODBtM3drdGt0eGVjY2hwZ2R2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zyFcsWHX2fdpyb5SBi/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTZ5Y295dGc5bnp5Z2h3bWlwbm4wc2p0NmY3ZTBuZnplN3dodDRyNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4JyNNqiVzBMbDOVO/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWdxZG42NHJheHNjcmhqdWIxb2I0aWxpMGx6M2U1OTN0eGdxb2M0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oOxSXI5D2cvc6kYSvw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWhjODZrNHlibjFlNXh1cXplc3pxa3dxZG1na3c4ZTVvN210MjdsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpyHdJiioVfdtK0/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnYyd3Z1aXdjMzNxa3gzYWppdGszbWR6ZWw0djYxNXF0dTBmcjlpdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6tgQPf7z3c1rkqWxYM/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                    <div class="flex w-1/2 h-full">
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWFuN3Q4eXY1OW44aGIwOGVsZ283OXJvNHJxcjd0azU2N2s1emx0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ox91VuRSYDxKkQF3zf/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDZ4Njc3bXljN3ptNDl4dzM3MXhjMnZtMGplemhjZWszNzh3cXJmMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9zExs2Q2h1EHfE4P6G/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHM3M3dlaG5ja3lrMGNybTQ0enV1ODBtM3drdGt0eGVjY2hwZ2R2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zyFcsWHX2fdpyb5SBi/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTZ5Y295dGc5bnp5Z2h3bWlwbm4wc2p0NmY3ZTBuZnplN3dodDRyNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4JyNNqiVzBMbDOVO/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWdxZG42NHJheHNjcmhqdWIxb2I0aWxpMGx6M2U1OTN0eGdxb2M0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oOxSXI5D2cvc6kYSvw/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWhjODZrNHlibjFlNXh1cXplc3pxa3dxZG1na3c4ZTVvN210MjdsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpyHdJiioVfdtK0/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnYyd3Z1aXdjMzNxa3gzYWppdGszbWR6ZWw0djYxNXF0dTBmcjlpdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6tgQPf7z3c1rkqWxYM/giphy.gif" alt="Banner" class="w-[14.285%] h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </header>
 
