@@ -167,6 +167,81 @@
             </p>
         </section>
 
+        <div class="tech-redirect-container">
+    
+            <a href="https://www.bleepingcomputer.com/" target="_blank" rel="noopener noreferrer" class="tech-icon-link" title="Acesse o BleepingComputer">
+                <i class="fas fa-shield-alt"></i>
+                <span class="tech-icon-text">Cyber Security</span>
+            </a>
+
+            <a href="https://www.linux.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link" title="Acesse o Portal Linux">
+                <i class="fab fa-linux"></i>
+                <span class="tech-icon-text">Linux</span>
+            </a>
+
+            <a href="https://kubernetes.io/blog/" target="_blank" rel="noopener noreferrer" class="tech-icon-link" title="Acesse o Blog do Kubernetes">
+                <i class="fas fa-dharmachakra"></i>
+                <span class="tech-icon-text">Kubernetes</span>
+            </a>
+
+            <a href="https://www.cloudcomputing-news.net" target="_blank" rel="noopener noreferrer" class="tech-icon-link" title="Acesse Cloud Computing News">
+                <i class="fas fa-cloud"></i>
+                <span class="tech-icon-text">Cloud News</span>
+            </a>
+
+            <a href="https://www.developer-tech.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link" title="Acesse Developer Tech">
+                <i class="fas fa-cogs"></i>
+                <span class="tech-icon-text">Development</span>
+            </a>
+
+        </div>
+
+        <style>
+            .tech-redirect-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 35px; /* Espaçamento horizontal equilibrado entre os 5 elementos */
+                margin: 30px auto;
+                padding: 15px;
+                width: 100%;
+                max-width: 1200px;
+                flex-wrap: wrap; /* Garante que os ícones quebrem de linha de forma elegante em telas menores */
+            }
+
+            .tech-icon-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                color: #007bff; /* Cor azul padrão (ajuste se seu template usar outra paleta) */
+                transition: transform 0.3s ease, color 0.3s ease;
+                font-family: system-ui, -apple-system, sans-serif;
+                min-width: 110px; /* Largura mínima ajustada para acomodar os 5 blocos */
+                text-align: center;
+            }
+
+            /* Tamanho padrão dos ícones */
+            .tech-icon-link i {
+                font-size: 3rem; 
+                margin-bottom: 10px;
+            }
+
+            /* Texto abaixo dos ícones */
+            .tech-icon-text {
+                font-size: 0.85rem;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+            }
+
+            /* Efeito de Hover ao passar o mouse */
+            .tech-icon-link:hover {
+                transform: scale(1.1);
+                color: #0056b3; /* Tom mais escuro no hover */
+            }
+        </style>
+
         <hr class="border-slate-800">
 
         <div class="grid md:grid-cols-2 gap-12">
