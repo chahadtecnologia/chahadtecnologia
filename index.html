@@ -292,46 +292,80 @@
                     <i class="fas fa-certificate text-sky-500"></i> Certifications
                 </h3>
                 <div class="grid grid-cols-1 gap-3">
-                    <details class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none">
-                        <summary class="p-4 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+                    <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none custom-accordion">
+                        <div class="p-4 flex justify-between items-center accordion-header">
                             <p class="text-slate-200 font-medium text-target">Associate Cloud Engineer / GCP</p>
-                            <span class="text-slate-400 transition-transform duration-300 group-open:rotate-180">▼</span>
-                        </summary>
-                        <div class="px-4 pb-4 pt-0 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
-                            Validates the ability to deploy applications, monitor operations, and manage enterprise solutions on Google Cloud Platform.
+                            <span class="text-slate-400 transition-transform duration-500 accordion-arrow">▼</span>
                         </div>
-                    </details>
+                        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                            <p class="px-4 pb-4 pt-1 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
+                                Validates the ability to deploy applications, monitor operations, and manage enterprise solutions on Google Cloud Platform.
+                            </p>
+                        </div>
+                    </div>
 
-                    <details class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none">
-                        <summary class="p-4 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+                    <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none custom-accordion">
+                        <div class="p-4 flex justify-between items-center accordion-header">
                             <p class="text-slate-200 font-medium text-target">EXIN Ethical Hacking & CompTIA PenTest+</p>
-                            <span class="text-slate-400 transition-transform duration-300 group-open:rotate-180">▼</span>
-                        </summary>
-                        <div class="px-4 pb-4 pt-0 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
-                            Covers advanced vulnerability assessment, penetration testing methodologies, and ethical hacking techniques to secure infrastructure.
+                            <span class="text-slate-400 transition-transform duration-500 accordion-arrow">▼</span>
                         </div>
-                    </details>
+                        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                            <p class="px-4 pb-4 pt-1 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
+                                Covers advanced vulnerability assessment, penetration testing methodologies, and ethical hacking techniques to secure infrastructure.
+                            </p>
+                        </div>
+                    </div>
 
-                    <details class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none">
-                        <summary class="p-4 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+                    <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none custom-accordion">
+                        <div class="p-4 flex justify-between items-center accordion-header">
                             <p class="text-slate-200 font-medium text-target">ICSI | CNSS Certified Network Security Specialist</p>
-                            <span class="text-slate-400 transition-transform duration-300 group-open:rotate-180">▼</span>
-                        </summary>
-                        <div class="px-4 pb-4 pt-0 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
-                            Focuses on network security foundations, covering firewalls, encryption, protocols, and defense strategies against cyber threats.
+                            <span class="text-slate-400 transition-transform duration-500 accordion-arrow">▼</span>
                         </div>
-                    </details>
+                        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                            <p class="px-4 pb-4 pt-1 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
+                                Focuses on network security foundations, covering firewalls, encryption, protocols, and defense strategies against cyber threats.
+                            </p>
+                        </div>
+                    </div>
 
-                    <details class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none">
-                        <summary class="p-4 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+                    <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none custom-accordion">
+                        <div class="p-4 flex justify-between items-center accordion-header">
                             <p class="text-slate-200 font-medium text-target">Linux Professional Institute / LPI 101</p>
-                            <span class="text-slate-400 transition-transform duration-300 group-open:rotate-180">▼</span>
-                        </summary>
-                        <div class="px-4 pb-4 pt-0 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
-                            Certifies core system administration skills, including Linux command line, architecture, installation, and package management.
+                            <span class="text-slate-400 transition-transform duration-500 accordion-arrow">▼</span>
                         </div>
-                    </details>
+                        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                            <p class="px-4 pb-4 pt-1 text-slate-400 text-sm transition-colors group-hover:text-slate-300">
+                                Certifies core system administration skills, including Linux command line, architecture, installation, and package management.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
+                <script>
+                    document.querySelectorAll('.custom-accordion').forEach(accordion => {
+                        accordion.addEventListener('click', function() {
+                            const content = this.querySelector('.accordion-content');
+                            const arrow = this.querySelector('.accordion-arrow');
+                            
+                            // Verifica se o item atual já está aberto
+                            const isOpen = !content.classList.contains('max-h-0');
+                            
+                            // Opcional: Fecha todos os outros antes de abrir o atual (efeito sanfona limpo)
+                            document.querySelectorAll('.accordion-content').forEach(el => {
+                                el.style.maxHeight = null;
+                                el.classList.add('max-h-0', 'opacity-0');
+                            });
+                            document.querySelectorAll('.accordion-arrow').forEach(el => el.classList.remove('rotate-180'));
+
+                            // Se não estava aberto, abre o atual calculando o tamanho real do texto
+                            if (!isOpen) {
+                                content.classList.remove('max-h-0', 'opacity-0');
+                                content.style.maxHeight = content.scrollHeight + "px";
+                                arrow.classList.add('rotate-180');
+                            }
+                        });
+                    });
+                </script>
 
                 <div class="group mt-8 p-6 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-sky-900/50 transform hover:scale-[1.02] transition-all duration-300">
                     <h4 class="text-sky-400 font-bold mb-3 flex items-center gap-2 text-target">
