@@ -342,28 +342,38 @@
                 </div>
 
                 <script>
-                    document.querySelectorAll('.custom-accordion').forEach(accordion => {
-                        accordion.addEventListener('click', function() {
-                            const content = this.querySelector('.accordion-content');
-                            const arrow = this.querySelector('.accordion-arrow');
-                            
-                            // Verifica se o item atual já está aberto
-                            const isOpen = !content.classList.contains('max-h-0');
-                            
-                            // Opcional: Fecha todos os outros antes de abrir o atual (efeito sanfona limpo)
-                            document.querySelectorAll('.accordion-content').forEach(el => {
-                                el.style.maxHeight = null;
-                                el.classList.add('max-h-0', 'opacity-0');
-                            });
-                            document.querySelectorAll('.accordion-arrow').forEach(el => el.classList.remove('rotate-180'));
+                    document.addEventListener('DOMContentLoaded', () => {
+                        
+                        document.querySelectorAll('.custom-accordion').forEach(accordion => {
+                            accordion.addEventListener('click', function() {
+                                const content = this.querySelector('.accordion-content');
+                                const arrow = this.querySelector('.accordion-arrow');
+                                
+                                // Verifica se o item clicado já está aberto
+                                const isOpen = !content.classList.contains('max-h-0');
+                                
+                                // 1. Fecha TODOS os itens e limpa os estilos inline antigos
+                                document.querySelectorAll('.accordion-content').forEach(el => {
+                                    el.classList.add('max-h-0', 'opacity-0');
+                                    el.style.maxHeight = '0px'; // Força o fechamento real
+                                });
+                                document.querySelectorAll('.accordion-arrow').forEach(el => {
+                                    el.classList.remove('rotate-180');
+                                });
 
-                            // Se não estava aberto, abre o atual calculando o tamanho real do texto
-                            if (!isOpen) {
-                                content.classList.remove('max-h-0', 'opacity-0');
-                                content.style.maxHeight = content.scrollHeight + "px";
-                                arrow.classList.add('rotate-180');
-                            }
+                                // 2. Se o item clicado estava fechado, abre ele agora
+                                if (!isOpen) {
+                                    content.classList.remove('max-h-0', 'opacity-0');
+                                    // Calcula a altura real do texto dinamicamente
+                                    content.style.maxHeight = content.scrollHeight + "px"; 
+                                    arrow.classList.add('rotate-180');
+                                } else {
+                                    // Se já estava aberto, garante que ele feche visualmente
+                                    content.style.maxHeight = '0px';
+                                }
+                            });
                         });
+
                     });
                 </script>
 
@@ -387,38 +397,131 @@
                 <i class="fas fa-cubes text-sky-500"></i> Technical Expertise
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Cyber Security:</strong> Cyber Security Architecture for cloud and microservice environments.</p>
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Cyber Security</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Cyber Security Architecture for cloud and microservice environments.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Cloud Computing:</strong> AWS, GCP, Azure, and OCI</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Cloud Computing</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">AWS, GCP, Azure, and OCI</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Containers & Orchestration:</strong> Docker, Kubernetes, Rancher, ECS, EKS, GKE, and OKE.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Containers & Orchestration</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Docker, Kubernetes, Rancher, ECS, EKS, GKE, and OKE.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">CI/CD & DevOps:</strong> Jenkins, GitLab CI, SonarQube, Nexus, and JFrog Artifactory.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">CI/CD & DevOps</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Jenkins, GitLab CI, SonarQube, Nexus, and JFrog Artifactory.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Infrastructure as Code & Automation:</strong> Ansible, Terraform, Puppet, and Foreman.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Infrastructure as Code & Automation</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Ansible, Terraform, Puppet, and Foreman.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Infrastructure & OS:</strong> Network and Linux Servers management (Debian, Ubuntu, CentOS, Red Hat).</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Infrastructure & OS</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Network and Linux Servers management (Debian, Ubuntu, CentOS, Red Hat).</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">OpenStack Structure:</strong> Implementation, management and image preparation (Linux/Windows) for OpenStack.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">OpenStack Structure</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Implementation, management and image preparation (Linux/Windows) for OpenStack.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Monitoring & Observability:</strong> Grafana, Prometheus, Graylog, Nagios and Netdata systems.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Monitoring & Observability</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Grafana, Prometheus, Graylog, Nagios and Netdata systems.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Programming:</strong> Python and Shell Script development.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Programming</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Python and Shell Script development.</p>
+                    </div>
                 </div>
-                <div class="group glass p-3 rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md">
-                    <p class="text-slate-300"><strong class="text-sky-400 text-target">Version Control:</strong> Git, GitHub, Bitbucket and GitLab.</p>
+
+                <div class="group glass rounded-lg accent-border transform hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer select-none accordion-skills">
+                    <div class="p-3 flex justify-between items-center header-skills">
+                        <p class="text-sky-400 text-target font-bold">Version Control</p>
+                        <span class="text-slate-400 transition-transform duration-500 arrow-skills">▼</span>
+                    </div>
+                    <div class="content-skills max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0">
+                        <p class="px-3 pb-3 text-slate-300">Git, GitHub, Bitbucket and GitLab.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.querySelectorAll('.accordion-skills').forEach(accordion => {
+                        accordion.addEventListener('click', function() {
+                            const content = this.querySelector('.content-skills');
+                            const arrow = this.querySelector('.arrow-skills');
+                            const isOpen = !content.classList.contains('max-h-0');
+                            
+                            // Fecha apenas os itens desta seção (Habilidades) ao abrir um novo
+                            document.querySelectorAll('.content-skills').forEach(el => {
+                                el.style.maxHeight = null;
+                                el.classList.add('max-h-0', 'opacity-0');
+                            });
+                            document.querySelectorAll('.arrow-skills').forEach(el => el.classList.remove('rotate-180'));
+
+                            if (!isOpen) {
+                                content.classList.remove('max-h-0', 'opacity-0');
+                                content.style.maxHeight = content.scrollHeight + "px";
+                                arrow.classList.add('rotate-180');
+                            }
+                        });
+                    });
+                });
+            </script>
 
         <section class="space-y-6 pb-12">
             <h3 class="text-2xl font-bold flex items-center gap-3">
